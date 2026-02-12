@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JSON Morph Viewer</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <style>
+        body {
+            margin: 0;
+            background: #282a36;
+            color: #f8f8f2;
+            padding: 20px;
+        }
+
+        #viewer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #44475a;
+            padding-bottom: 10px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #bd93f9;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="viewer-container">
+        <div class="header">
+            <h1>JSON Viewer</h1>
+        </div>
+        <div id="content" class="json-container">
+            Loading...
+        </div>
+    </div>
+    <script type="module" src="viewer.js"></script>
+</body>
+
+</html>

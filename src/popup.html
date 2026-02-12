@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JSON Morph Popup</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <style>
+        body {
+            width: 400px;
+            height: 500px;
+            margin: 0;
+            background: #282a36;
+            color: #f8f8f2;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .header {
+            padding: 10px;
+            background: #44475a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title {
+            font-weight: bold;
+        }
+
+        .controls {
+            display: flex;
+            gap: 5px;
+        }
+
+        button {
+            background: #6272a4;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background: #bd93f9;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        textarea {
+            flex: 1;
+            background: #1e1f29;
+            color: #f8f8f2;
+            border: 1px solid #6272a4;
+            border-radius: 4px;
+            resize: none;
+            padding: 10px;
+            font-family: monospace;
+        }
+
+        .result-container {
+            flex: 1;
+            overflow: auto;
+            border: 1px solid #6272a4;
+            border-radius: 4px;
+            background: #1e1f29;
+            padding: 10px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <span class="title">JSON Morph</span>
+        <div class="controls">
+            <button id="format-btn">Format</button>
+            <button id="open-tab-btn">Open in Tab</button>
+        </div>
+    </div>
+    <div class="content">
+        <textarea id="input-area" placeholder="Paste JSON here..."></textarea>
+        <div id="output-area" class="json-container hidden"></div>
+    </div>
+    <script type="module" src="popup.js"></script>
+</body>
+
+</html>

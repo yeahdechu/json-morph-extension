@@ -1,0 +1,102 @@
+/* Dracula-ish Theme for JSON */
+.json-container {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #282a36;
+    color: #f8f8f2;
+    padding: 20px;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-x: auto;
+}
+
+.json-string {
+    color: #f1fa8c;
+}
+
+.json-number {
+    color: #bd93f9;
+}
+
+.json-boolean {
+    color: #ff79c6;
+}
+
+.json-null {
+    color: #ff79c6;
+}
+
+.json-key {
+    color: #8be9fd;
+}
+
+.json-undefined {
+    color: #6272a4;
+}
+
+/* Overlay styles */
+.json-morph-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2147483647;
+    /* Max z-index */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+#json-morph-modal {
+    background: #282a36;
+    width: 80%;
+    height: 80%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #44475a;
+}
+
+#json-morph-header {
+    background: #44475a;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #6272a4;
+}
+
+#json-morph-title {
+    color: #f8f8f2;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#json-morph-close {
+    background: none;
+    border: none;
+    color: #ff5555;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+#json-morph-content {
+    flex: 1;
+    overflow: auto;
+    padding: 0;
+    margin: 0;
+}
+
+#json-morph-content pre {
+    margin: 0;
+    padding: 20px;
+}

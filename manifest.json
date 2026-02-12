@@ -1,0 +1,52 @@
+{
+    "manifest_version": 3,
+    "name": "JSON Morph",
+    "version": "1.0",
+    "description": "Format and beautify JSON strings instantly from any webpage.",
+    "permissions": [
+        "contextMenus",
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "background": {
+        "service_worker": "src/background.js"
+    },
+    "action": {
+        "default_popup": "src/popup.html",
+        "default_title": "JSON Morph"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "src/content.js"
+            ],
+            "css": [
+                "assets/styles.css"
+            ]
+        }
+    ],
+    "commands": {
+        "format-selection": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+F",
+                "mac": "Command+Shift+F"
+            },
+            "description": "Format selected JSON"
+        }
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "assets/styles.css",
+                "utils/json-formatter.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
